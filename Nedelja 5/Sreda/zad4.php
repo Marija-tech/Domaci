@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="zad4php.php" method="get">
+    <form action="prepravka.php" method="get">
         <input type="number" name="a">
         <input type="number" name="b">
         <input type="number" name="c">
