@@ -18,6 +18,7 @@
             }else{
                 echo "Brojevi $num1, $num2 i $num3 su isti.";
             }
+            return;
         }
 
         returnLarger(2, 204, 19);

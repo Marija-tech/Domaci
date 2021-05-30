@@ -16,7 +16,8 @@
                 echo "<span>$i</span>";
                 echo "</div>";
                 $i++;
-            }          
+            }    
+            return;      
         }
         createDiv(5);
     ?>

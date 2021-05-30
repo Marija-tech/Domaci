@@ -20,6 +20,7 @@
                 echo "</div>";
                 $i++;
             }
+            return;
         }
         createDivs(5, 4);
     ?>
