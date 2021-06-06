@@ -10,7 +10,7 @@
 <!-- Napisati fju koja vraca true ako neki dati niz ne sadrzi nule, a u suprotnom vraca false. -->
 
     <?php
-        $z = [12, 8, 5, 2];
+        $z = [12, 8, 0, 5, 2];
 
         function no_zeros($array) {
             $found = true;
@@ -24,11 +24,11 @@
            
         }
 
-        //echo no_zeros($z);
+        echo no_zeros($z);
         
         
          
-        print((no_zeros($z) ? "true" : "false"));
+        
              
     ?>
 </body>

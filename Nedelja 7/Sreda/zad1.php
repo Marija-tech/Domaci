@@ -19,18 +19,19 @@
     <!-- Od niza zadatih reči, napraviti niz čiji će svaki element predstavljati span. Svaki span će imati klasu "crveni", "zeleni" u zavisnosti od toga da li je reč kraća ili duža od 5 slova. Prikazati dobijeni niz. -->
     <?php
         $array = ["domaci", "zadatak", "niz", "element", "rec"];
-
-        
+ 
+        $new_arr = [];
         foreach($array as $value){
             if(strlen($value) > 5){
-                echo "<span class='green'> $value </span>";
+                $new_arr[] = "<span class='green'>".$value."</span>";
             }else{
-                echo "<span class='red'> $value </span>";
+                $new_arr[] = "<span class='red'>".$value."</span>";
             }
         }
 
-       
-            
+        echo print_r($new_arr, 1);
+        
+
 
     ?>
 </body>
