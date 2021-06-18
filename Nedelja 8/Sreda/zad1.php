@@ -27,14 +27,9 @@
                 $this->cena = $cena;
             }
 
-            private function set_cena (){
-                $cena = $this->cena;
-               
-            }
-
             public function get_cena () {
-                echo $this->cena;
-                $this->set_cena();
+                return $this->cena;
+                
             }
             
             public function popust ($p){
@@ -45,7 +40,7 @@
 
             public function __toString()
             {
-                return "Proizvod duzine ".$this->duzina." i sirine ".$this->sirina." , napravljen od ".$this->materijal." po ceni od ".$this->cena. " RSD";
+                return "Proizvod duzine ".$this->duzina." i sirine ".$this->sirina." , napravljen od ".$this->materijal." po ceni od ".$this->cena. " RSD.";
             
             }
 
@@ -58,7 +53,8 @@
         
         $krevet1 = new Krevet(200, 80, "memorijska pena", 38000);
         $krevet2 = new Krevet(200, 180, "memorijska pena", 60000);
-        if($krevet1 > $krevet2){
+
+        if($krevet1->get_cena() > $krevet2->get_cena()){
             echo $krevet1;
         }else{
             echo $krevet2;
@@ -71,7 +67,7 @@
         
         $krevet3 = new Krevet(200, 160, "memorijska pena", 45000);
         echo $krevet3."<br>";
-        echo $krevet3.", a cena sa popustom je ".$krevet3->popust(10)." RSD";
+        echo $krevet3.", a cena sa popustom je ".$krevet3->popust(10)." RSD.";
         
         
         

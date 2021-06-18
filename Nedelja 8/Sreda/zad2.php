@@ -18,23 +18,17 @@
         class Baldahin extends Krevet{
             public $visina;
             public $cena_Baldahina;
-
-            function __construct($duzina, $sirina, $materijal, $cena, $popust, $visina, $cena_Baldahina)
+            
+            function __construct($duzina, $sirina, $materijal, $cena, $visina, $cena_Baldahina)
             {
-                parent::__construct($duzina, $sirina, $materijal, $cena, $popust,$visina, $cena_Baldahina);
+                parent::__construct($duzina, $sirina, $materijal, $cena, $visina, $cena_Baldahina);
                 $this->cena = $cena;
                 $this->visina = $visina;
                 $this->cena_Baldahina = $cena_Baldahina;
             }
 
-            private function set_cena_Baldahina (){
-                $cena = $this->cena_Baldahina;
-               
-            }
-
             public function get_cena_Baldahina () {
-                echo $this->cena_Baldahina;
-                $this->set_cena_Baldahina();
+                return $this->cena_Baldahina;             
             }
             
             function zbir (){ 
@@ -43,13 +37,13 @@
             }
             function __toString()
             {
-                return "Cena samog kreveta je ".$this->cena." RSD, a cena Baldahina je ".$this->cena_Baldahina." RSD, odnosno ".$this->zbir()." RSD";
+                return "Cena samog kreveta je ".$this->cena." RSD, a cena Baldahina je ".$this->cena_Baldahina." RSD, odnosno ".$this->zbir()." RSD.";
             }
         }
         /* 2. Metoda __toString, ne poziva roditeljski __toString, vec prikazuje dve cene. Cenu kreveta bez baldahina i sa baldahinom (zbirno). 
         (Posto je cena u klasi Proizvod private, da bi joj se iz klase Baldahin moglo pristupiti treba ili a) uvesti protected ili b) dodati metodu "daj_cenu") */
 
-        $krevet4 = new Baldahin (200, 200, "memorijska pena", 60000, 10, 2, 20000);
+        $krevet4 = new Baldahin (200, 200, "memorijska pena", 60000, 10, 20000);
 
         echo $krevet4;
       
