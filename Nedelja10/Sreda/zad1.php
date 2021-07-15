@@ -63,6 +63,8 @@ class Baza{
     echo "<br>";
     print_r($ta->vrati_id('Spanija', 'Madrid'));
     print_r($ta->vrati_destinaciju(4));
+
+    
     
     
 ?>
